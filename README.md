@@ -28,7 +28,7 @@ If you want to run this setup on a local geth node, it's fairly easy to get goin
 5. Send eth from the developer account to the account configured in this project's `.env` file `PRIVATE_KEY`:
 ```shell
 > eth.sendTransaction({
-rom: '0xAF810549002a55F62C36EDfbb7378691c117AbB8',
+from: '0xAF810549002a55F62C36EDfbb7378691c117AbB8',
 to: '0xd82dCBd90E56aFBbdeaCe05Eb3A7d3d8623AbA4f',
 value: web3.toWei(100, 'ether')
 });
