@@ -8,6 +8,9 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY;
 if (!PRIVATE_KEY) {
   throw new Error("Please set your PRIVATE_KEY in a .env file");
 }
+
+const WASP_LOCAL_PRIVATE_KEY = process.env.WASP_LOCAL_PRIVATE_KEY;
+
 const config: HardhatUserConfig = {
   networks: {
     hardhat: {},
@@ -19,6 +22,10 @@ const config: HardhatUserConfig = {
     local_geth: {
       url: "http://127.0.0.1:8545/",
       accounts:[PRIVATE_KEY]
+    },
+    local_wasp: {
+      url: "http://127.0.0.1:8545/",
+      accounts:[WASP_LOCAL_PRIVATE_KEY]
     },
     shimmer_evm_testnet: {
       url:"https://json-rpc.evm.testnet.shimmer.network",

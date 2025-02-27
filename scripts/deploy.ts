@@ -125,7 +125,7 @@ async function main() {
     console.log("Deployer address:", deployer.address);
 
     // Check if current network is "hardhat". If so, skip persisting data
-    const isLocalHardhat = network.name === "hardhat";
+    const isLocalHardhat = network.name === "hardhat" || network.name === "local_wasp";
 
     // Prepare the location for your deployment file
     const networkName = network.name; // e.g., "hardhat", "localhost", "sepolia"
