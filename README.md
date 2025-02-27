@@ -1,6 +1,12 @@
 # Tracing Debug
 
 A tool to help debug evm tracing issues.
+## Quick Setup
+The following should be all you need to setup the project and then deploy it to a local evmemulator instance.
+1. `npm install`
+2. `cp .env.example .env`
+3. `./tracedebug.sh`
+4. The output should be very long with nested calls. If there is only a single CALL result, the trace is incorrect.
 
 ## Setup
 1. Install deps with `npm install`
